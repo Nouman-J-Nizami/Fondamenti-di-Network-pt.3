@@ -1,9 +1,50 @@
-Fondamenti di Network pt.3
+# Network Fundamentals Pt.3 – DHCP, DNS and HTTP Services
 
-In questo esercizio ho lavorato su una rete locale (LAN) per capire come un client riesce a collegarsi a un server web usando un nome di dominio interno invece dell’indirizzo IP.
-Il DHCP serve per assegnare automaticamente al client l’indirizzo IP e le altre informazioni di rete, così non è necessario configurarle a mano.
-Il DNS interno viene usato per tradurre il nome del dominio nell’indirizzo IP del server.
-Il server HTTP, che ha un IP statico, risponde alle richieste del client mostrando la pagina web.
-Quando dal browser viene inserito il nome del dominio, prima avviene la risoluzione DNS e poi la richiesta HTTP al server.
-Se si prova ad accedere a un sito esterno, come ad esempio Google, la connessione non funziona perché la rete non è collegata a Internet.
-Questo esercizio mi ha aiutato a capire meglio come DHCP, DNS e HTTP lavorano insieme all’interno di una rete locale.
+## Overview
+This project demonstrates the configuration and validation of essential network services in Cisco Packet Tracer, including DHCP, DNS, and HTTP.
+
+The objective was to simulate a small enterprise LAN where clients automatically obtain network settings, resolve internal domain names, and access web resources hosted on a local HTTP server.
+
+## Technologies & Services
+- Cisco Packet Tracer
+- DHCP
+- DNS
+- HTTP
+- IPv4 Networking
+- LAN Configuration
+
+## Project Activities
+
+### DHCP Configuration
+- Created and configured a DHCP server
+- Defined IP address pool
+- Configured subnet mask, default gateway, and DNS server
+- Verified automatic IP assignment on client devices
+
+### HTTP Server Configuration
+- Deployed a web server with a static IP address
+- Enabled HTTP service
+- Verified web page accessibility from client hosts
+
+### DNS Configuration
+- Configured DNS service
+- Created an A Record:
+  - `epicode.internal → 192.168.1.90`
+- Tested successful hostname resolution
+
+### Connectivity Testing
+- Verified DHCP lease assignment
+- Tested DNS name resolution
+- Accessed the web server using the domain name:
+  - `http://epicode.internal`
+- Analyzed the DNS Query → DNS Reply → HTTP GET → HTTP Response workflow
+
+## Key Learning Outcomes
+- DHCP automation and address management
+- DNS hostname resolution
+- HTTP service deployment
+- Client-server communication flow
+- OSI model application in real-world networking scenarios
+
+## Author
+Nouman J Nizami – Network & Cybersecurity 
